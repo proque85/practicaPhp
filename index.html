@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery.js"></script>
+    <title>Practicas</title>
+</head>
+<body>
+    <script type="text/javascript">
+$(document).ready(function(){
+cargas();
+});
+
+
+
+cargas=()=>{
+    let url='https://vimeo.com/api/oembed.json?url=https://vimeo.com/636485535';
+    $.get(url,function (data) {
+        
+        console.log("Los datos enviados son de tipo:"+typeof(data));
+
+    },"JSON").done(function(data){
+                console.log("Los datos enviados son:"+data.type +" y mi apellido: "+data.title);
+    }); 
+
+}
+
+    </script>
+</body>
+</html>

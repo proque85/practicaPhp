@@ -31,7 +31,6 @@ class Amd implements Computadora{
 }
 
 
-
 $Amd= New Amd();
 $Intel= New Intel();
 $procesadoresAmd=$Amd->procesador();
